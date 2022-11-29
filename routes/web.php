@@ -58,9 +58,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/data', [WargadesaController::class, 'getdata'])->middleware('auth');
 
 Route::get('/tambah-data', [WargadesaController::class, 'tambahdata'])->middleware('auth');
-Route::post('/tambah-data', [WargadesaController::class, 'store'])->middleware('auth');
+Route::post('/tambah-data', [WargadesaController::class, 'store']);
 
 Route::get('/data/edit/{id}', [WargadesaController::class, 'editdata'])->middleware('auth');
-Route::put('/data/edit/{id}', [WargadesaController::class, 'update'])->middleware('auth');
+Route::put('/data/edit/{id}', [WargadesaController::class, 'update']);
 
 Route::delete('/data/delete/{id}', [WargadesaController::class, 'destroy'])->middleware('auth');
